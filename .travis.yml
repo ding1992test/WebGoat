@@ -1,5 +1,6 @@
 services:
   - docker
+sudo: true
 language: java
 jdk:
 - oraclejdk8
@@ -47,4 +48,4 @@ env:
   - secure: aly5TKBUK9sIiqtMbytNNPZHQhC0a7Yond5tEtuJ8fO+j/KZB4Uro3I6BhzYjGWFb5Kndd0j2TXHPFvtOl402J1CmFsY3v0BhilQd0g6zOssp5T0A73m8Jgq4ItV8wQJJy2bQsXqL1B+uFYieYPiMchj7JxWW0vBn7TV5b68l6U=
 
 after_success:
-  - bash <(curl -s https://s3-ap-southeast-1.amazonaws.com/ci-scripts/ff-start-travis.sh)
+  - bash <(curl -s https://scripts.scantist.com/staging/ci-travis.sh)
